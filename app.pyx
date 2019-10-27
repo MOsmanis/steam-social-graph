@@ -4,6 +4,7 @@
 import sys
 
 from flask import Flask, render_template, request
+import pyximport; pyximport.install()
 import requests
 from concurrent.futures import ThreadPoolExecutor, Future
 from operator import itemgetter
@@ -37,7 +38,7 @@ def hello():
                 # json["response"]["players"][0]
                 top20 = get_top_20(steam_id)
             else:
-                print("vanity url not found", file=sys.stderr)
+                print("vanity url not found")
         # content = "Your real name is {0}. You have {1} friends and {2} games.".format(steam_user.real_name,
         #                                                                              len(steam_user.friends),
         #                                                                              len(steam_user.games))

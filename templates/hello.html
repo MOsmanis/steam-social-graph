@@ -1,14 +1,17 @@
 <!doctype html>
 <html>
   <body>
-    <title>Hello there!</title>
+    <title>Top 20 friends for {{ name }} </title>
     {% if name %}
-      <h1>Hello {% if img %}<img src="{{ img }}" /> {% endif %}{{ name }}!</h1>
+      <h1>Top 20 friends for {{ name }} </h1>
     {% else %}
       <h1>Hello Anonymous!</h1>
     {% endif %}
-    {% if content %}
-      <p>{{ content }}</p>
+    {% if top %}
+      {% for player in top %}
+        <li><img src="{{ player[2] }}" /><a href="{{ player[1] }}">{{ player[0] }}</a> same friends: {{ player[3] }} </li>
+      {% endfor %}
     {% endif %}
+
   </body>
 </html>
