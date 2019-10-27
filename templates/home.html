@@ -1,11 +1,39 @@
 <!doctype html>
-<html>
-  <body>
-    <title>Hello there!</title>
-    <form action="/user">
-            Steam name:<br>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>Steam Social Graph</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+     <script type="text/javascript"
+         src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+	<header>
+		<div id="logo">Steam Social Graph</div>
+		<nav>
+            <ul>
+            </ul>
+		</nav>
+	</header>
+	<section>
+	</section>
+	<section id="pageContent">
+		<main role="main">
+			<form action="/user">
+            Steam ID (64) or username from profile URL (<a href="https://steamidfinder.com/">Find here</a>):<br>
   <input type="text" name="name"><br>
   <input type="submit">
     </form>
-  </body>
+		</main>
+	</section>
+	<footer>
+	</footer>
+
+
+</body>
+
 </html>

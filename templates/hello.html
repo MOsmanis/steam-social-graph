@@ -1,7 +1,27 @@
 <!doctype html>
-<html>
-  <body>
-    <title>Top 20 friends for {{ name }} </title>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>Steam Social Graph</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+     <script type="text/javascript"
+         src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+	<header>
+		<div id="logo">Steam Social Graph</div>
+		<nav>  
+			<ul>
+
+			</ul>
+		</nav>
+	</header>
+	<section id="pageContent">
+		<main role="main">
     {% if name %}
       <h1>Top 20 friends for {{ name }} </h1>
     {% else %}
@@ -12,6 +32,12 @@
         <li><img src="{{ player[2] }}" /><a href="{{ player[1] }}">{{ player[0] }}</a> same friends: {{ player[3] }} </li>
       {% endfor %}
     {% endif %}
+		</main>
+	</section>
+	<footer>
+	</footer>
 
-  </body>
+
+</body>
+
 </html>
